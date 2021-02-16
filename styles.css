@@ -31,6 +31,9 @@ body {
     z-index: 10;
     cursor: pointer;
 }
+.fa-search {
+    color: #384756;
+}
 .header__search-icon:hover {
     opacity: 0.5;
 }
@@ -40,11 +43,16 @@ body {
     top: -7px;
     left: 60px;
     width: 150px;
+    border: 1px solid #384756;
+    border-radius: 15px;
     height: 30px;
     cursor: pointer;
-    padding: 0 10px 0 10px;
+    outline-style: none;
+    padding: 0 10px 0 13px;
 }
-
+.fa-comment-alt, .fa-bell, .fa-user-circle {
+    color: #384756;
+}
 .header__comment {
     position: absolute;
     top: 20px;
@@ -76,16 +84,18 @@ body {
     position: absolute;
     top: 12px;
     left: 14px;
-    border: 1px solid #000;
-    height: 30px;
+    border: 2px solid #f0f1f0;
+    height: 28px;
     width: 30px;
-    background: rgba(255, 255, 255, 0.1);
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 40;
+    z-index: 11;
+}
+.fa-bars {
+    color: #f0f1f0;
 }
 .menu__wrapper {
     background-color: #333f4e;
@@ -99,7 +109,7 @@ body {
     width: 100%;
     width: 200px;
     transition: all .5s;
-    z-index: 20;
+    z-index: 10;
 }
 .container__menu {
     position: relative;
@@ -117,6 +127,7 @@ body {
     color: #f0f1f0;
     font-size: 18px;
     line-height: 22px;
+    height: 80px;
     padding: 30px 20px 20px 15px;
     display: inline-block;
     transition: all .5s;
@@ -143,3 +154,153 @@ body {
 .menu__close:before {
     transform: rotate(-45deg);
 }
+
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+    justify-content: space-between;
+    white-space: nowrap;
+    position: relative;
+}
+.main__column-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+    min-width: 160px;
+    height: 500px;
+    position: relative;
+    top: 60px;
+    left: 100px;
+    box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    color: #384756;
+    flex: 1;
+}
+.main__column-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 15px;
+    min-width: 200px;
+    height: 500px;
+    position: relative;
+    top: 60px;
+    right: 50px;
+    box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    color: #384756;
+    flex: 2;
+}
+.main__column-link {
+    height: 25px;
+}
+.fa-angle-down {
+    position: relative;
+    cursor: pointer;
+    left: 3px;
+    top: 2px;
+}
+.main__column-links {
+    display: flex;
+    gap: 15px;
+    height: 25px;
+}
+.main__column-link a {
+    color: #384756;
+}
+.main__column-links a {
+    color: #384756;
+}
+.main__column-title {
+    cursor: pointer;
+    height: 25px;
+}
+.main__column-title:hover {
+    border-bottom: 2px solid #384756;
+}
+.main__column-link:hover {
+    border-bottom: 2px solid #384756;
+}
+.main__column-list:hover {
+    border-bottom: 2px solid #384756;
+}
+.main__column-map:hover {
+    border-bottom: 2px solid #384756;
+}
+
+@media (max-width: 560px) {
+    .main__container {
+        gap: 100px;
+        justify-content: center;
+    }
+    .main__column-left {
+        font-size: 12px;
+        height: 300px;
+        top: 30px;
+        left: 70px;
+        max-width: 100px;
+    }
+    .main__column-right {
+        font-size: 12px;
+        height: 300px;
+        top: 30px;
+        right: 0;
+        max-width: 200px;
+    }
+}
+@media (max-width: 460px) {
+    .header__search {
+        left: 75px;
+    }
+    .main__container {
+        gap: 80px;
+        justify-content: center;
+    }
+    .main__column-left {
+        font-size: 10px;
+        height: 300px;
+        top: 30px;
+        left: 70px;
+        max-width: 100px;
+    }
+    .main__column-right {
+        font-size: 10px;
+        height: 300px;
+        top: 30px;
+        left: 0;
+        max-width: 200px;
+    }
+}
+@media (max-width: 439px) {
+    .main__container {
+        gap: 80px;
+    }
+    .main__column-left {
+        height: 250px;
+        left: 10px;
+    }
+    .main__column-right {
+        height: 250px;
+        top: 0;
+        left: 10px;
+    }
+    .header__search input {
+        top: -3;
+        left: 30px;
+        width: 130px;
+        padding: 0 2px 0 5px;
+    }
+    .header__comment {
+        right: 50px;
+    }
+    .header__bell {
+        right: 30px;
+    }
+    .header__user {
+        right: 10px;
+    }
+    
+}
+
