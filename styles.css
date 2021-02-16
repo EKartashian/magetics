@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  *, *:before, *:after {
+      box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+
+.header {
+    height: 55px;
+    background-color: #fff;
+    box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.3);
+}
+.header__wrapper {
+    width: 60px;
+    height: 100vh;
+    background-color: #384756;
+}
+.header__search {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    z-index: 10;
+    cursor: pointer;
+}
+.header__search-icon:hover {
+    opacity: 0.5;
+}
+.header__search input {
+    display: none;
+    position: absolute;
+    top: -7px;
+    left: 60px;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+}
+
+.header__comment {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    z-index: 10;
+}
+.header__comment:hover {
+    opacity: 0.5;
+}
+.header__bell {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    z-index: 10;
+}
+.header__bell:hover {
+    opacity: 0.5;
+}
+.header__user {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+.header__user:hover {
+    opacity: 0.5;
+}
+.header__button {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    border: 1px solid #000;
+    height: 30px;
+    width: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+}
+.menu__wrapper {
+    background-color: #333f4e;
+    height: 55px;
+}
+.menu {
+    background-color: #384756;
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 100%;
+    width: 200px;
+    transition: all .5s;
+    z-index: 20;
+}
+.container__menu {
+    position: relative;
+}
+.menu.active {
+    left: 0;
+}
+.menu__list {
+    height: 100vh;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+}
+.menu__list a {
+    color: #f0f1f0;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 30px 20px 20px 15px;
+    display: inline-block;
+    transition: all .5s;
+}
+.menu__list a:hover {
+    border-bottom: 1px solid #f0f1f0;
+    transition: all .5s;
+}
+.menu__list ul {
+    list-style: none;
+}
+.menu__close {
+    position: absolute;
+    cursor: pointer;
+    color: #f0f1f0;
+    top: 20px;
+    right: 10px;
+    z-index: 10;
+}
+.menu__close:after {
+    transform: rotate(45deg);
+}
+
+.menu__close:before {
+    transform: rotate(-45deg);
+}
